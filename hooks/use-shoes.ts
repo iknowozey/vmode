@@ -2,8 +2,9 @@ import { Shoes } from "@/lib/generated/prisma"
 import { Api } from "@/services/api-client"
 import React from "react"
 
-export const useSetShoes = () => {
+export const useShoes = () => {
 	const [shoes, setShoes] = React.useState<Shoes[]>([])
+	const [loading, setLoading] = React.useState(true)
 
 	React.useEffect(() => {
 		async function fetchShoes() {
@@ -12,10 +13,12 @@ export const useSetShoes = () => {
 				setShoes(result)
 			} catch (e) {
 				console.error(e)
+			} finally {
+				setLoading(false)
 			}
 		}
 		fetchShoes()
 	}, [])
 
-	return { shoes }
+	return { shoes, loading }
 }

@@ -1,2 +1,1 @@
-export { useDebouncedScroll } from "@/hooks/useDebouncedScroll"
-export { useSetShoes } from "@/hooks/useSetShoes"
+export { useShoes } from "@/hooks/use-shoes"
