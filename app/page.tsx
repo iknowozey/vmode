@@ -1,7 +1,12 @@
+import { Container } from "@/components/shared/container"
+import { SectionShoes } from "@/components/shared/section-shoes"
+
 export default function Home() {
 	return (
 		<>
-			<h1>page.tsx</h1>
+			<Container>
+				<SectionShoes />
+			</Container>
 		</>
 	)
 }

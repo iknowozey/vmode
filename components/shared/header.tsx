@@ -15,7 +15,7 @@ interface Props {
 export const Header: React.FC<Props> = ({ className }) => {
 	return (
 		<>
-			<div className="sticky top-0 bg-background">
+			<div className="sticky top-0 bg-background z-10">
 				<Container>
 					<header
 						className={cn(
