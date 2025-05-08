@@ -4,29 +4,17 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { Shoes } from "@/lib/generated/prisma"
-import { Api } from "@/services/api-client"
+import { useSetShoes } from "@/hooks"
+import { ScrollToTopWrapper } from "./scroll-to-top-wrapper"
 
 interface Props {
 	className?: string
 	columns?: number
-	sex?: string
 }
 
 export const SectionShoes: React.FC<Props> = ({ className }) => {
-	const [shoes, setShoes] = React.useState<Shoes[]>([])
+	const { shoes } = useSetShoes()
 
-	React.useEffect(() => {
-		async function fetchShoes() {
-			try {
-				const result = await Api.shoes.getAll()
-				setShoes(result)
-			} catch (e) {
-				console.error(e)
-			}
-		}
-		fetchShoes()
-	}, [])
 	return (
 		<>
 			<div className={cn("flex justify-center relative z-0 py-10", className)}>
@@ -51,6 +39,7 @@ export const SectionShoes: React.FC<Props> = ({ className }) => {
 						</Link>
 					))}
 				</div>
+				<ScrollToTopWrapper />
 			</div>
 		</>
 	)

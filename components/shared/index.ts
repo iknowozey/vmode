@@ -1,1 +1,6 @@
 export { Header } from "./header"
+export { SectionShoes } from "./section-shoes"
+export { ScrollToTopWrapper } from "./scroll-to-top-wrapper"
+export { TopBar } from "./top-bar"
+export { Container } from "./container"
+export { ToggleTheme } from "./toggle-theme"

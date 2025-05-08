@@ -1,5 +1,4 @@
-import { Container } from "@/components/shared/container"
-import { SectionShoes } from "@/components/shared/section-shoes"
+import { Container, SectionShoes } from "@/components/shared"
 
 export default function Home() {
 	return (

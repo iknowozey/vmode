@@ -1,2 +1,3 @@
 export { Button } from "./button"
 export { Input } from "./input"
+export { ScrollToTopButton } from "./scroll-to-top-button"

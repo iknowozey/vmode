@@ -4,9 +4,7 @@ import React from "react"
 import Image from "next/image"
 import { Button, Input } from "../ui"
 import { ArrowRight, ShoppingBasket } from "lucide-react"
-import { ToggleTheme } from "./toggle-theme"
-import { TopBar } from "./top-bar"
-import { Container } from "./container"
+import { Container, TopBar, ToggleTheme } from "./"
 
 interface Props {
 	className?: string
@@ -15,7 +13,7 @@ interface Props {
 export const Header: React.FC<Props> = ({ className }) => {
 	return (
 		<>
-			<div className="sticky top-0 bg-background z-10">
+			<div className="sticky top-0 bg-background/80 z-10 backdrop-blur-xl">
 				<Container>
 					<header
 						className={cn(
