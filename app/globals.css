@@ -112,8 +112,8 @@
 }
 
 body {
-	font-family: Montserrat, sans-serif;
 	overflow-y: scroll;
+	font-family: Montserrat, sans-serif;
 }
 
 @layer base {
