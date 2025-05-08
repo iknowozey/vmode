@@ -47,7 +47,7 @@ export const TopBar: React.FC<Props> = ({ className }) => {
 								<p className="text-xs">{name}</p>
 								<ChevronRight
 									size={13}
-									className="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+									className="opacity-0 group-hover:opacity-100 transition-opacity duration-500"
 								/>
 							</Link>
 						</div>

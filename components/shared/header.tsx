@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 import React from "react"
 import Image from "next/image"
-import { Button, Input } from "../ui"
+import { Button } from "../ui"
 import { ArrowRight, ShoppingBasket } from "lucide-react"
-import { Container, TopBar, ToggleTheme } from "./"
+import { Container, TopBar, ToggleTheme, SearchInput } from "./"
 
 interface Props {
 	className?: string
@@ -45,7 +45,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 								<p className="text-xs">GitHub</p>
 							</Link>
 						</div>
-						<Input placeholder="Поиск" className="w-220" />
+						<SearchInput />
 						<div className="flex items-center gap-10">
 							<div className="flex gap-5">
 								<Button variant="outline">Войти</Button>
