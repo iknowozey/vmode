@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { useShoes } from "@/hooks"
 import { ScrollToTopWrapper } from "./scroll-to-top-wrapper"
 import { Skeleton } from "../ui"
+import { ArrowRight } from "lucide-react"
 
 interface Props {
 	className?: string
@@ -37,7 +38,7 @@ export const SectionShoes: React.FC<Props> = ({ className }) => {
 								<Link
 									key={shoes.id}
 									href={`/shoes/${shoes.slug}`}
-									className="flex flex-col items-center w-55 h-55 transition-transform duration-500 hover:scale-103"
+									className="group flex flex-col items-center w-55 h-55 transition-transform duration-500 hover:scale-103"
 								>
 									<div className="relative w-55 h-45 overflow-hidden rounded-lg">
 										<Image
@@ -47,6 +48,13 @@ export const SectionShoes: React.FC<Props> = ({ className }) => {
 											fill
 											alt={shoes.slug}
 										/>
+										<div className="absolute top-3 right-3 p-1 bg-background/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+											<ArrowRight
+												size={16}
+												className="text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+												strokeWidth={1.5}
+											/>
+										</div>
 									</div>
 									<p className="text-xs pt-2">{shoes.name}</p>
 									<p className="text-xs pt-1">{shoes.price} ₽</p>

@@ -28,7 +28,7 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 				{shoes.length > 0 && (
 					<div
 						className={cn(
-							"absolute w-220 border bg-background/95 rounded-lg top-8 py-2 shadow-md transition-all duration-200 invisible opacity-0 z-10",
+							"absolute w-220 border bg-background rounded-lg top-8 py-2 shadow-md transition-all duration-200 invisible opacity-0 z-10",
 							focused && "visible opacity-100 top-11"
 						)}
 					>
