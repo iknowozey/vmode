@@ -1,4 +1,4 @@
-import { ChooseShoes } from "@/components/shared"
+import { ChooseShoes } from "@/shared/components/shared"
 import prisma from "@/lib/prisma"
 import { notFound } from "next/navigation"
 

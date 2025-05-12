@@ -4,7 +4,7 @@ import React from "react"
 import Image from "next/image"
 import { Button } from "../ui"
 import { ArrowRight, ShoppingBasket } from "lucide-react"
-import { Container, TopBar, ToggleTheme, SearchInput } from "./"
+import { Container, TopBar, ToggleTheme, SearchInput } from "."
 
 interface Props {
 	className?: string

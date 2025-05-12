@@ -1,4 +1,4 @@
-import { Api } from "@/services/api-client"
+import { Api } from "@/shared/services/api-client"
 import { Shoes } from "@/lib/generated/prisma"
 import { useClickAway, useDebounce } from "react-use"
 import React from "react"

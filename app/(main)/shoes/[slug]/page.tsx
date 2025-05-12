@@ -1,10 +1,14 @@
-import { Container, DescriptionShoes, WarrantyInfo } from "@/components/shared"
+import {
+	Container,
+	DescriptionShoes,
+	WarrantyInfo,
+} from "@/shared/components/shared"
 import prisma from "@/lib/prisma"
 import { notFound } from "next/navigation"
-import { BreadCrumb } from "@/components/shared"
+import { BreadCrumb } from "@/shared/components/shared"
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui"
+import { Button } from "@/shared/components/ui"
 
 export default async function ShoesPage({
 	params: { slug },

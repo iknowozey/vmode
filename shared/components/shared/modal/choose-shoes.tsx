@@ -1,11 +1,11 @@
 "use client"
 
-import { Button, Dialog } from "@/components/ui"
+import { Button, Dialog } from "@/shared/components/ui"
 import { Shoes } from "@/lib/generated/prisma"
 import { cn } from "@/lib/utils"
 import React from "react"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
-import { DialogContent, DialogTitle } from "@/components/ui/dialog"
+import { DialogContent, DialogTitle } from "@/shared/components/ui/dialog"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"

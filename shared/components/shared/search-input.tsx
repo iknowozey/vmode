@@ -4,7 +4,7 @@ import React from "react"
 import { Input } from "../ui"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { useSearchShoes } from "@/hooks"
+import { useSearchShoes } from "@/shared/hooks"
 
 interface Props {
 	className?: string

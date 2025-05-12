@@ -6,7 +6,7 @@ import {
 	BreadcrumbList,
 	BreadcrumbPage,
 	BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+} from "@/shared/components/ui/breadcrumb"
 import { cn } from "@/lib/utils"
 import { Shoes } from "@/lib/generated/prisma"
 
