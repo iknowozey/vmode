@@ -1,0 +1,19 @@
+import { ChooseShoes } from "@/components/shared"
+import prisma from "@/lib/prisma"
+import { notFound } from "next/navigation"
+
+export default async function ShoesModal({
+	params,
+}: {
+	params: { slug: string }
+}) {
+	const shoes = await prisma.shoes.findFirst({
+		where: { slug: params.slug },
+	})
+
+	if (!shoes) {
+		return notFound()
+	}
+
+	return <ChooseShoes shoes={shoes} />
+}

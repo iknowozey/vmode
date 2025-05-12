@@ -39,7 +39,7 @@ export default async function ShoesPage({
 						<div className="flex flex-col justify-around bg-accent/80 p-6 rounded-lg">
 							<div>
 								<div className="flex items-center justify-between mb-4">
-									<p className="text-xl font-bold">{shoes.name}</p>
+									<p className="text-2xl font-bold">{shoes.name}</p>
 									<p className="text-foreground/50 text-xl font-bold">
 										{shoes.color}
 									</p>
@@ -76,7 +76,7 @@ export default async function ShoesPage({
 											fill
 											alt={shoes.slug}
 										/>
-										<div className="absolute inset-0 bg-black opacity-70"></div>
+										<div className="absolute inset-0 bg-black/50"></div>
 									</div>
 									<div className="relative w-40 h-30 overflow-hidden rounded-lg">
 										<Image
@@ -86,7 +86,7 @@ export default async function ShoesPage({
 											fill
 											alt={shoes.slug}
 										/>
-										<div className="absolute inset-0 bg-black opacity-70"></div>
+										<div className="absolute inset-0 bg-black/50"></div>
 									</div>
 								</div>
 							</div>

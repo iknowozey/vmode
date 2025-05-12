@@ -9,8 +9,10 @@ export const metadata: Metadata = {
 
 export default function MainLayout({
 	children,
+	modal,
 }: Readonly<{
 	children: React.ReactNode
+	modal: React.ReactNode
 }>) {
 	return (
 		<main>
@@ -22,6 +24,7 @@ export default function MainLayout({
 			>
 				<Header />
 				{children}
+				{modal}
 			</ThemeProvider>
 		</main>
 	)
