@@ -60,7 +60,9 @@ export default async function ShoesPage({
 								</Button>
 								<div className="flex items-center justify-between mb-8">
 									<p className="text-xl">{shoes.price} ₽</p>
-									<Button className="w-1/2 h-10">Добавить в корзину</Button>
+									<Button className="w-1/2 h-10" variant="gradient">
+										Добавить в корзину
+									</Button>
 								</div>
 								<div className="flex justify-between mb-5">
 									<div className="relative w-40 h-30 overflow-hidden rounded-lg">
