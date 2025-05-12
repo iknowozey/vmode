@@ -11,10 +11,9 @@ export const useShoes = () => {
 			try {
 				const result = await Api.shoes.getAll()
 				setShoes(result)
+				setLoading(false)
 			} catch (e) {
 				console.error(e)
-			} finally {
-				setLoading(false)
 			}
 		}
 		fetchShoes()
