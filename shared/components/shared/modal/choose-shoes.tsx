@@ -12,9 +12,11 @@ import {
 } from "@/shared/components/ui/dialog"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import { WarrantyInfo } from "../warranty-info"
 import { useCarousel } from "@/shared/hooks"
+import { ChooesSizes } from "../choose-sizes"
+import { AddToCard } from "../add-to-card"
 
 interface Props {
 	className?: string
@@ -116,29 +118,15 @@ export const ChooseShoes: React.FC<Props> = ({ shoes, className }) => {
 										{shoes.color}
 									</p>
 								</div>
-
-								<Button
-									className="flex items-center justify-between px-4 border border-foreground w-full h-12 rounded-lg mb-4 font-normal"
-									variant="outline"
-								>
-									<p className="text-sm">Размер</p>
-									<div className="flex items-center gap-1">
-										<p>RUS 38</p>
-										<ChevronDown size={16} />
-									</div>
-								</Button>
-
+								<ChooesSizes />
 								<p className="text-2xl mb-4">{shoes.price} ₽</p>
 							</div>
-
 							<div className="flex flex-col gap-6">
 								<WarrantyInfo />
 								<Button className="w-full h-10">
 									Полная информация о модели
 								</Button>
-								<Button className="w-full h-15" variant="gradient">
-									Добавить в корзину
-								</Button>
+								<AddToCard />
 							</div>
 						</div>
 					</div>

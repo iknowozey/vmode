@@ -36,38 +36,6 @@ export function useCarousel(imagesUrl: string[]) {
 		}
 	}, [imagesUrl.length])
 
-	useEffect(() => {
-		const container = imageContainerRef.current
-		if (!container) return
-
-		let startX = 0
-		let isDragging = false
-
-		const handleMouseDown = (e: MouseEvent) => {
-			startX = e.clientX
-			isDragging = true
-		}
-
-		const handleMouseUp = (e: MouseEvent) => {
-			if (!isDragging) return
-			const endX = e.clientX
-			const diff = endX - startX
-			if (Math.abs(diff) > 50) {
-				if (diff < 0) handleImageChange("next")
-				else handleImageChange("prev")
-			}
-			isDragging = false
-		}
-
-		container.addEventListener("mousedown", handleMouseDown)
-		document.addEventListener("mouseup", handleMouseUp)
-
-		return () => {
-			container.removeEventListener("mousedown", handleMouseDown)
-			document.removeEventListener("mouseup", handleMouseUp)
-		}
-	}, [])
-
 	return {
 		currentImage,
 		setCurrentImage,
