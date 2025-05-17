@@ -117,8 +117,8 @@ export const ChooseShoes: React.FC<Props> = ({ shoes, className }) => {
 									</p>
 								</div>
 
-								<p className="text-2xl mb-4">{shoes.price} ₽</p>
-								<ChooesSizes />
+								<p className="text-3xl font-bold mb-4">{shoes.price} ₽</p>
+								<ChooesSizes shoes={shoes} />
 							</div>
 							<div className="flex flex-col gap-6">
 								<WarrantyInfo />

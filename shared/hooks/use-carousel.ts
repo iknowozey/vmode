@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react"
 
 export function useCarousel(imagesUrl: string[]) {
@@ -7,10 +6,6 @@ export function useCarousel(imagesUrl: string[]) {
 	const imageContainerRef = useRef<HTMLDivElement>(null)
 	const timerRef = useRef<NodeJS.Timeout | null>(null)
 	const isManuallyChanging = useRef(false)
-
-	const nextImage = () => {
-		setCurrentImage(prev => (prev + 1) % imagesUrl.length)
-	}
 
 	const handleImageChange = (dir: "prev" | "next") => {
 		isManuallyChanging.current = true
@@ -26,6 +21,10 @@ export function useCarousel(imagesUrl: string[]) {
 	}
 
 	useEffect(() => {
+		const nextImage = () => {
+			setCurrentImage(prev => (prev + 1) % imagesUrl.length)
+		}
+
 		timerRef.current = setInterval(() => {
 			if (!isManuallyChanging.current) {
 				nextImage()
