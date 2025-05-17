@@ -42,14 +42,14 @@ export default async function ShoesPage({
 						</div>
 						<div className="flex flex-col bg-accent/80 p-6 rounded-lg">
 							<div>
-								<div className="flex items-center justify-between mb-4">
+								<div className="flex items-center justify-between mb-1">
 									<p className="text-2xl font-bold">{shoes.name}</p>
 									<p className="text-foreground/50 text-xl font-bold">
 										{shoes.color}
 									</p>
 								</div>
+								<p className="text-lg mb-2">{shoes.price} ₽</p>
 								<ChooesSizes />
-								<p className="text-xl mb-4">{shoes.price} ₽</p>
 								<AddToCard />
 								<div className="flex justify-between mb-5 pt-6">
 									<div className="relative w-40 h-30 overflow-hidden rounded-lg">

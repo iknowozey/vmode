@@ -1,6 +1,5 @@
 "use client"
 
-import { Button } from "@/shared/components/ui"
 import { Shoes } from "@/lib/generated/prisma"
 import { cn } from "@/lib/utils"
 import React from "react"
@@ -44,9 +43,8 @@ export const ChooseShoes: React.FC<Props> = ({ shoes, className }) => {
 				<VisuallyHidden>
 					<DialogTitle>Информация о товаре</DialogTitle>
 				</VisuallyHidden>
-
 				<div className="flex">
-					<div className="flex flex-col relative w-1/2 h-full">
+					<div className="flex flex-col relative w-1/2 h-full gap-7 bg-foreground/30">
 						<div
 							ref={imageContainerRef}
 							className="relative w-full h-110 overflow-hidden group cursor-pointer select-none"
@@ -60,20 +58,20 @@ export const ChooseShoes: React.FC<Props> = ({ shoes, className }) => {
 							/>
 							<button
 								onClick={() => handleImageChange("prev")}
-								className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/50 text-foreground p-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-500 cursor-pointer"
+								className="rounded-md absolute left-3 top-1/2 -translate-y-1/2 bg-background/50 text-foreground p-2 opacity-0 group-hover:opacity-100 transition duration-500 cursor-pointer"
 							>
 								<ChevronLeft size={20} />
 							</button>
 							<button
 								onClick={() => handleImageChange("next")}
-								className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/50 text-foreground p-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-500 cursor-pointer"
+								className="rounded-md absolute right-3 top-1/2 -translate-y-1/2 bg-background/50 text-foreground p-2 opacity-0 group-hover:opacity-100 transition duration-500 cursor-pointer"
 							>
 								<ChevronRight size={20} />
 							</button>
 						</div>
 						<div
 							ref={thumbsRef}
-							className="flex justify-center gap-4 pt-4 px-2 overflow-x-auto scroll-smooth"
+							className="flex justify-center gap-4 px-2 overflow-x-auto scroll-smooth"
 						>
 							{shoes.imagesUrl.map((url, index) => (
 								<div
@@ -118,14 +116,12 @@ export const ChooseShoes: React.FC<Props> = ({ shoes, className }) => {
 										{shoes.color}
 									</p>
 								</div>
-								<ChooesSizes />
+
 								<p className="text-2xl mb-4">{shoes.price} ₽</p>
+								<ChooesSizes />
 							</div>
 							<div className="flex flex-col gap-6">
 								<WarrantyInfo />
-								<Button className="w-full h-10">
-									Полная информация о модели
-								</Button>
 								<AddToCard />
 							</div>
 						</div>
