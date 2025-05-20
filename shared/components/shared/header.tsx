@@ -49,27 +49,28 @@ export const Header: React.FC<Props> = ({ className }) => {
 						<div className="flex items-center gap-10">
 							<div className="flex gap-5">
 								<Button variant="outline">Войти</Button>
-								<Button
-									className={cn("group relative", className)}
-									variant="outline"
-								>
-									<b className="text-xs font-normal">0 ₽</b>
-									<span className="h-full w-[1px] bg-primary mx-1" />
-									<div className="flex items-center gap-1 transition duration-300 group-hover:opacity-0">
-										<ShoppingBasket className="relative" strokeWidth={1} />
-										<b className="text-xs font-normal">0</b>
-									</div>
-									<ArrowRight
-										size={20}
-										className="absolute right-5 transition duration-300 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0"
-									/>
-								</Button>
+								<Link href="/cart">
+									<Button
+										className={cn("group relative", className)}
+										variant="outline"
+									>
+										<b className="text-xs font-normal">0 ₽</b>
+										<span className="h-full w-[1px] bg-primary mx-1" />
+										<div className="flex items-center gap-1 transition duration-300 group-hover:opacity-0">
+											<ShoppingBasket className="relative" strokeWidth={1} />
+											<b className="text-xs font-normal">0</b>
+										</div>
+										<ArrowRight
+											size={20}
+											className="absolute right-5 transition duration-300 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0"
+										/>
+									</Button>
+								</Link>
 							</div>
 							<ToggleTheme />
 						</div>
 					</header>
 				</Container>
-
 				<TopBar />
 			</div>
 		</>

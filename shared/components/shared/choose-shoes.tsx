@@ -38,7 +38,7 @@ export const ChooseShoes: React.FC<Props> = ({ shoes }) => {
 						<div className="relative w-172.5 h-130 overflow-hidden rounded-lg">
 							<div
 								ref={imageContainerRef}
-								className="relative w-full h-110 overflow-hidden group cursor-pointer select-none"
+								className="relative w-full h-full overflow-hidden group cursor-pointer select-none"
 							>
 								<Image
 									className="object-cover transition-opacity duration-300"
