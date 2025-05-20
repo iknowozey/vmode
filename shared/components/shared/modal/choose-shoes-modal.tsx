@@ -22,7 +22,7 @@ interface Props {
 	shoes: Shoes
 }
 
-export const ChooseShoes: React.FC<Props> = ({ shoes, className }) => {
+export const ChooseShoesModal: React.FC<Props> = ({ shoes, className }) => {
 	const router = useRouter()
 	const {
 		currentImage,

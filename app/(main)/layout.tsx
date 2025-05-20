@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Header } from "@/shared/components/shared"
+import { Header, ScrollToTopWrapper } from "@/shared/components/shared"
 import { ThemeProvider } from "@/shared/components/providers/theme-provider"
 
 export const metadata: Metadata = {
@@ -23,6 +23,7 @@ export default function MainLayout({
 				disableTransitionOnChange
 			>
 				<Header />
+				<ScrollToTopWrapper />
 				{children}
 				{modal}
 			</ThemeProvider>

@@ -67,7 +67,7 @@ export const ChooesSizes: React.FC<Props> = ({ shoes, className }) => {
 							onClick={() => {
 								setSelectedSize(size)
 								setIsOpen(false)
-							}}
+							}}	
 						>
 							{size}
 						</Button>

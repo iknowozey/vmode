@@ -1,4 +1,4 @@
-import { ChooseShoes } from "@/shared/components/shared"
+import { ChooseShoesModal } from "@/shared/components/shared"
 import prisma from "@/lib/prisma"
 import { notFound } from "next/navigation"
 
@@ -15,5 +15,5 @@ export default async function ShoesModal({
 		return notFound()
 	}
 
-	return <ChooseShoes shoes={shoes} />
+	return <ChooseShoesModal shoes={shoes} />
 }
