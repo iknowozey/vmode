@@ -1,7 +1,7 @@
 import { CartShoesItem, Container } from "@/shared/components/shared"
 import { Button } from "@/shared/components/ui"
 
-export default function Home() {
+export default function CartPage() {
 	return (
 		<>
 			<Container className="px-10">
