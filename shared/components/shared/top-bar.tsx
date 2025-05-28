@@ -24,7 +24,7 @@ export const TopBar: React.FC<Props> = ({ className }) => {
 		},
 		{
 			name: "Цвет",
-			href: "/children",
+			href: "/color",
 		},
 		{
 			name: "Сезон",

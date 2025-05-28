@@ -76,3 +76,5 @@ export const Header: React.FC<Props> = ({ className }) => {
 		</>
 	)
 }
+export { TopBar }
+

@@ -2,9 +2,8 @@ import { cn } from "@/lib/utils"
 import Link from "next/link"
 import React from "react"
 import Image from "next/image"
-import { Button } from "../ui"
-import { ArrowRight, ShoppingBasket } from "lucide-react"
-import { Container, TopBar, ToggleTheme, SearchInput } from "."
+import { Container } from "./container"
+import { ToggleTheme } from "./toggle-theme"
 
 interface Props {
 	className?: string

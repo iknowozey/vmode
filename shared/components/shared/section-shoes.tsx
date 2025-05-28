@@ -14,13 +14,18 @@ interface Props {
 	columns?: number
 }
 
-export const SectionShoes: React.FC<Props> = ({ className }) => {
+export const SectionShoes: React.FC<Props> = ({ className, columns = 5 }) => {
 	const { shoes, loading } = useShoes()
 
 	return (
 		<>
-			<div className={cn("flex justify-center relative z-0 py-10", className)}>
-				<div className="grid grid-cols-5 gap-8">
+			<div className={cn("flex justify-center relative z-0 pt-10", className)}>
+				<div
+					className={cn(
+						"grid gap-8",
+						columns === 4 ? "grid-cols-4" : "grid-cols-5"
+					)}
+				>
 					{loading
 						? Array.from({ length: 20 }).map((_, index) => (
 								<div

@@ -19,7 +19,7 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 			<div className="relative w-220">
 				<div className={cn("flex items-center", className)} ref={ref}>
 					<Input
-						placeholder="Поиск"
+						placeholder="Найти модель"
 						onFocus={() => setFocused(true)}
 						value={searchQuery}
 						onChange={e => setSearchQuery(e.target.value)}
