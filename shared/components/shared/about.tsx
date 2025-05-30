@@ -4,7 +4,7 @@ import { Copyright } from "lucide-react"
 
 export const About: React.FC = () => {
 	return (
-		<Container className="h-lvh">
+		<Container>
 			<div className="flex flex-col items-center font-bold">
 				<h3 className="text-xl pt-30 mb-5">НАША МИССИЯ:</h3>
 				<p className="max-w-[992px] text-[36px] text-center leading-[250%] mb-5">

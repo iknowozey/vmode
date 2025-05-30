@@ -4,25 +4,32 @@ import {
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
-} from "../../ui/accordion"
-import { RangeSlider } from "../range-slider"
+} from "../ui/accordion"
+import { RangeSlider } from "./range-slider"
 
 interface Props {
+	value: [number, number]
+	onValueChange: (value: number[]) => void
 	className?: string
 }
 
-export const FilterPrice: React.FC<Props> = ({ className }) => {
+export const FilterPrice: React.FC<Props> = ({
+	value,
+	onValueChange,
+	className,
+}) => {
 	return (
 		<div className={className}>
 			<Accordion type="single" collapsible>
-				<AccordionItem value="item-1">
+				<AccordionItem value="price">
 					<AccordionTrigger>Цена</AccordionTrigger>
 					<AccordionContent>
 						<RangeSlider
 							min={0}
 							max={50000}
 							step={100}
-							value={[0, 50000]}
+							value={value}
+							onValueChange={onValueChange}
 							className="pt-4"
 						/>
 					</AccordionContent>

@@ -51,7 +51,7 @@ const RangeSlider = React.forwardRef(
 				value={localValues}
 				onValueChange={handleValueChange}
 				className={cn(
-					"relative flex w-[235px] mb-10 touch-none select-none items-center mx-auto",
+					"relative flex w-[200px] mb-10 touch-none select-none items-center mx-auto",
 					className
 				)}
 				{...props}
