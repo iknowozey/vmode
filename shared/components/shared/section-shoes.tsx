@@ -109,7 +109,7 @@ export const SectionShoes: React.FC<Props> = ({
 								>
 									<div className="relative w-55 h-45 overflow-hidden rounded-lg">
 										<Image
-											className="w-full h-full"
+											className="w-full h-full object-cover"
 											src={shoe.imagesUrl[0]}
 											loading="lazy"
 											fill

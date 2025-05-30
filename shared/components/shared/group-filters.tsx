@@ -34,7 +34,7 @@ const GroupFilters: React.FC<GroupFiltersProps> = ({
 		}
 
 	return (
-		<div className="w-60 pt-10">
+		<div className="w-60 pt-10 max-h-[calc(100vh-30rem)]">
 			<FilterAccordion
 				type="brand"
 				title="Бренд"
