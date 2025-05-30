@@ -3,7 +3,7 @@ export type FilterItem = {
 	name: string
 }
 
-export type FilterType = "brand" | "color" | "season" | "sex" | "price"
+export type FilterType = "brand" | "sex" | "price"
 
 export type CheckboxSelections = Record<string, boolean>
 
@@ -14,8 +14,7 @@ export type PriceRange = {
 
 export type FilterSelections = {
 	brand: CheckboxSelections
-	color: CheckboxSelections
-	season: CheckboxSelections
+
 	sex: CheckboxSelections
 	price: PriceRange
 }

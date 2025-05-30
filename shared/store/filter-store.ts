@@ -18,8 +18,7 @@ interface FilterState {
 
 const initialFilterSelections: FilterSelections = {
 	brand: {},
-	color: {},
-	season: {},
+
 	sex: {},
 	price: { min: 0, max: 100000 },
 }

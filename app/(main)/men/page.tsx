@@ -14,8 +14,6 @@ const ManPage: React.FC = () => {
 	useEffect(() => {
 		const initialManFilters: FilterSelections = {
 			brand: {},
-			color: {},
-			season: {},
 			sex: { мужской: true },
 			price: { min: 0, max: 100000 },
 		}

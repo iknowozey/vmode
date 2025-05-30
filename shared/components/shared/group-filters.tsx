@@ -3,12 +3,7 @@
 import React from "react"
 import { FilterType } from "@/@types/filters"
 import { FilterAccordion } from "./filter-accordion"
-import {
-	useBrands,
-	useColors,
-	useSeasons,
-	useSexes,
-} from "@/shared/hooks/filters"
+import { useBrands, useSexes } from "@/shared/hooks/filters"
 import { FilterPrice } from "./filter-price"
 import { useFilterStore } from "@/shared/store/filter-store"
 
@@ -23,8 +18,6 @@ const GroupFilters: React.FC<GroupFiltersProps> = ({
 		useFilterStore()
 
 	const brands = useBrands()
-	const colors = useColors()
-	const seasons = useSeasons()
 	const sexes = useSexes()
 
 	const handleSelectionChange =
@@ -42,24 +35,6 @@ const GroupFilters: React.FC<GroupFiltersProps> = ({
 				onSelectionChange={handleSelectionChange("brand")}
 				withSearch
 				defaultOpen={defaultOpenFilterType === "brand"}
-			/>
-
-			<FilterAccordion
-				type="color"
-				title="Цвет"
-				items={colors}
-				selectedItems={selections.color}
-				onSelectionChange={handleSelectionChange("color")}
-				defaultOpen={defaultOpenFilterType === "color"}
-			/>
-
-			<FilterAccordion
-				type="season"
-				title="Сезон"
-				items={seasons}
-				selectedItems={selections.season}
-				onSelectionChange={handleSelectionChange("season")}
-				defaultOpen={defaultOpenFilterType === "season"}
 			/>
 
 			<FilterAccordion

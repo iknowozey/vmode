@@ -17,8 +17,6 @@ const BrandsPage: React.FC<Props> = ({ className }) => {
 	useEffect(() => {
 		const defaultBrandsFilter = {
 			brand: {},
-			color: {},
-			season: {},
 			sex: {},
 			price: { min: 0, max: 100000 },
 		}

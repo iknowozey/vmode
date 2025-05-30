@@ -31,25 +31,6 @@ export const useFilteredShoes = (
 			)
 		}
 
-		const selectedColors = Object.keys(appliedFilters.color || {}).filter(
-			key => appliedFilters.color[key]
-		)
-		if (selectedColors.length > 0) {
-			tempShoes = tempShoes.filter(
-				shoe => shoe.color && selectedColors.includes(shoe.color.toLowerCase())
-			)
-		}
-
-		const selectedSeasons = Object.keys(appliedFilters.season || {}).filter(
-			key => appliedFilters.season[key]
-		)
-		if (selectedSeasons.length > 0) {
-			tempShoes = tempShoes.filter(
-				shoe =>
-					shoe.season && selectedSeasons.includes(shoe.season.toLowerCase())
-			)
-		}
-
 		const selectedSexes = Object.keys(appliedFilters.sex || {}).filter(
 			key => appliedFilters.sex[key]
 		)
