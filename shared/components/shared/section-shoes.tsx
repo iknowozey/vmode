@@ -23,8 +23,6 @@ export const SectionShoes: React.FC<Props> = ({
 }) => {
 	const { shoes: allShoes, loading } = useShoes()
 
-	console.log("SectionShoes received appliedFilters:", appliedFilters)
-
 	const filteredShoes = React.useMemo(() => {
 		let tempShoes = allShoes
 

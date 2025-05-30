@@ -27,7 +27,7 @@ const BrandsPage: React.FC<Props> = ({ className }) => {
 
 	return (
 		<Container className={cn("", className)}>
-			<div className="relative flex justify-between gap-10 px-10">
+			<div className="flex justify-between gap-10 px-10">
 				<GroupFilters defaultOpenFilterType="brand" />
 				<SectionShoes appliedFilters={selections} />
 			</div>
