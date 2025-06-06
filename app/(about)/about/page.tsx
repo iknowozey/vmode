@@ -1,9 +1,9 @@
-import { About } from "@/shared/components/shared"
+import {About} from "@/shared/components/shared"
 
 export default function AboutPage() {
-	return (
-		<>
-			<About />
-		</>
-	)
+  return (
+    <>
+      <About />
+    </>
+  )
 }

@@ -1,23 +1,24 @@
-import { Shoes } from "@/lib/generated/prisma"
-import { Api } from "@/shared/services/api-client"
+import {Shoes} from "@/lib/generated/prisma"
+import {Api} from "@/shared/services/api-client"
 import React from "react"
 
 export const useShoes = () => {
-	const [shoes, setShoes] = React.useState<Shoes[]>([])
-	const [loading, setLoading] = React.useState(true)
+  const [shoes, setShoes] = React.useState<Shoes[]>([])
+  const [loading, setLoading] = React.useState(true)
 
-	React.useEffect(() => {
-		async function fetchShoes() {
-			try {
-				const result = await Api.shoes.getAll()
-				setShoes(result)
-				setLoading(false)
-			} catch (e) {
-				console.error(e)
-			}
-		}
-		fetchShoes()
-	}, [])
+  React.useEffect(() => {
+    async function fetchShoes() {
+      try {
+        const result = await Api.shoes.getAll()
+        setShoes(result)
+        setLoading(false)
+      } catch (e) {
+        console.error(e)
+      }
+    }
 
-	return { shoes, loading }
+    fetchShoes()
+  }, [])
+
+  return {shoes, loading}
 }

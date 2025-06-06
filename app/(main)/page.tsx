@@ -1,11 +1,11 @@
-import { Container, SectionShoes } from "@/shared/components/shared"
+import {Container, SectionShoes} from "@/shared/components/shared"
 
 export default function Home() {
-	return (
-		<>
-			<Container>
-				<SectionShoes />
-			</Container>
-		</>
-	)
+  return (
+    <>
+      <Container>
+        <SectionShoes />
+      </Container>
+    </>
+  )
 }
